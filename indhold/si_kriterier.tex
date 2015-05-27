@@ -1,33 +1,14 @@
-\section{Kriterier}
-Her vil de vigtigste kriterier, som skal opfyldes for at kunne kalde projektet en succes, blive præsenteret.
-Disse kriterier dækker over to overordnede områder: i forhold til bruger, og i forhold til platformen i sig selv.
+\section{Kriterier}\label{firstsubseckriterier}
+Her bliver de vigtigste kriterier, som skal opfyldes for at kunne kalde projektet en succes, præsenteret.
 
-\subsection{Bruger}
+\begin{description}[style=nextline]
+	\item[Modulær] 
+	Da individer kan have forskellige symptomer skal det være muligt at tilføje og fjerne datakilder, samt analyser af disse, så den enkelte patient får den bedst mulige behandling.
+	\item[Fleksibel]
+	Det skal være nemt at modificere funktionalitet til platformen, da platformen skal kunne tilpasses til individet.
+	\item[Kombinerbar] Eftersom vi prioriterer modulærbarhed skal ansvarsområder være lette at separere så indhentede data kan bruges på tværs af systemet.
+	\item[Kommunikativ] Data skal være tilgængeligt på tværs af systemet, men skal samtidig være beskyttet mod at blive redigeret af uvedkommende.
+\end{description}
 
-\subsubsection{Sikkerhed}
-Da systemet, afhængigt af valgte moduler, kan indeholde person-følsomme data er det vigtigt at denne data er opbevaret sikkert og ikke kan tilgås af udefrakommende processer der ønsker at bruge den data til andet end helbredsestimering.
-\bruno{Moduler er ikke nævnt her endnu.}
-
-\subsubsection{Stabilitet}
-For at sikre der ikke opstår for mange huller i den indsamlede data, skal systemet køre stabilt, så der kontinuert kan indsamles data.
-Hvis der opstår for mange huller, kan dette give et ufuldstændigt billede af patientens sindstilstand, som måske kan fejl-fortolkes.
-
-\subsubsection{Præcision}
-Ligesom ved huller i indsamlingen af data over tid, er det lige så vigtigt at den data der kommer ind er præcis.
-Dette er især også gældende for den måde som analyse-moduler fortolker den rå data, da fejl i analyser vil kunne give et forkert billede af patientens sindstilstand.
-
-\subsection{Platform}
-
-\subsubsection{Fleksibilitet}
-Det skal være nemt at modificere selve platformen (ikke kun tilføjelse af nye moduler), da det stadig er et usikkert område der opereres indenfor.
-Disse usikkerheder gælder både problemområde og den platform der implementeres på (Android).
-
-\subsubsection{Mulighed for udvidelse}
-Det skal være muligt at udvide platformen, uden at modificere platformens kodebase.
-Dette skal gøres med moduler.
-Det skal gøres på sådan en måde at personer der ikke er en del af systemet, kan lave og tilføje egne moduler.
-Dette giver naturligvis yderligere overvejelser ift. sikkerhed.
-
-\subsection{Evaluering af kriterier}
-\mikael{Hvordan skal vi evaluere på de kriterier? Hvad kunne være godt at gøre? Hvad har vi egentlig tænkt os at gøre?}
-\bruno{Igen +1 til Mikael - damn it..}
+\subsection{Evaluering af et eller flere kriterier}
+\als{Skal skrives}
