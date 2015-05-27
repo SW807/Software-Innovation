@@ -9,6 +9,37 @@ Her bliver de vigtigste kriterier, som skal opfyldes for at kunne kalde projekte
 	\item[Kombinerbar] Eftersom vi prioriterer modulærbarhed skal ansvarsområder være lette at separere så indhentede data kan bruges på tværs af systemet.
 	\item[Kommunikativ] Data skal være tilgængeligt på tværs af systemet, men skal samtidig være beskyttet mod at blive redigeret af uvedkommende.
 \end{description}
+Disse kriterier er de samme som kan findes i konfigurationstabellen (\cref{}).\als{ref til den rigtige}
+Kriterierne opstilles til at kunne evaluere ens løsning.
+Resultatet af denne evaluering er findings, der skaber grundlaget for konstruktionen af næste konfigurationstabel (\cref{})\als{ref til næste konfig}.
 
-\subsection{Evaluering af et eller flere kriterier}
-\als{Skal skrives}
+\subsection{Evaluering af kriterier}
+\begin{description}[style=nextline]
+	\item[Modulær]
+	Platformen er udviklet med primært fokus på at være modulær, og det kan konkluderes at den er det.
+	Hele arkitekturen er opbygget af en manager applikation og en række separate moduler, som kan bruges i manageren.
+	Dette understøttes af den fælles datagrænseflade i form af DBAccess og moduldefinitionerne.  
+	Det er muligt at specificere at man er afhængig af blot et modul af en mængde af disse.
+	Eksempelvis er det muligt for et analysemodul at afhænge af et accelerationsmodul.
+	
+	Som et eksisterende eksempel på at moduler nemt kan tilføjes og bruges af manageren er udviklede moduler, beskrevet i \citet{misc:soevnrapp} og \citet{misc:surveyrapp}.
+	Disse eksempler viser også hvorledes det er muligt at udvikle moduler, der afhænger af data fra andre moduler.
+	
+	\item[Fleksibilitet]
+	Til at sikre at platformen er fleksibel i forhold til patienten, hvor de har kontrol over hvilke moduler, der kan køre, tilbydes dette i form af en indstillingsmenu.
+	I den sammenhæng kan det konkluderes at platformen er fleksibel.
+	Endvidere har patienten også kontrol over hvilke moduler, der er installeret på deres smartphone, idét hvert modul er en separat applikation på deres smartphone, som de sagtens kan afinstallere hvis ønsket.
+	
+	\item[Kombinerbar]
+	Vi kan også konkludere at platformen sikrer kombinerbarhed.
+	Med dette tænkes at data indsamlet fra diverse moduler kan benyttes af andre moduler, eksempelvis analyse moduler.
+	Et klart eksempel på dette kan læses i \citet{misc:soevnrapp}, hvor data fra et søvnestimeringsmodul for acceleration og et modul for amplitude kombineres i et samlet søvnestimeringsmodul.
+	
+	\item[Kommunikativ]
+	Det kommunikative kriterie er understøttet i den grad at data nemt kan kommunikeres til relevante moduler.
+	Dog er sikkerhedskriteriet for denne kommunikation ikke på plads.
+	Derudover er der ikke opsat skriverettighedsrestriktioner, og således er der altså et kriterie der ikke er blevet opfyldt og skal arbejdes videre med før man kan konkludere at en tilpas færdig platform er udviklet.
+\end{description}
+\als{Vi har ikke rigtigt brugt nogen procedure til at evaluere? hvad gør vi med det}
+Udfra denne evaluering har vi en finding der gå på manglende skriverettighedsrestriktioner.
+Desuden kan vi erfare at kriterierne om modularitet, fleksibilitet og kombinerbarhed er opfyldt.
