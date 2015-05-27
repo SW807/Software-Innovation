@@ -2,7 +2,7 @@
 \begin{center}
 \begin{tikzpicture}
 [
-    scale=3,
+    scale=5,
     axis/.style={very thick, <->, >=stealth'},
     important line/.style={thick},
     dashed line/.style={dashed, thin},
@@ -10,7 +10,7 @@
     >=2pt},
     every node/.style={color=black}
     ]
-    \tikzstyle{every node}=[font=\tiny]
+    \tikzstyle{every node}=[font=\small]
     \draw[axis] (-1,0) node(xline)[below]{#1}  -- (1,0) node(xline)[below]{#2};
     \draw[axis] (0,-1) node(yline)[right]{#4} -- (0,1) node(yline)[left]{#3};
     \node[draw=none,align=center,text width=3cm] at (-0.5,0.5){#5};
