@@ -1,34 +1,28 @@
 \section{Diskussion af implementation af hovedscenarier}
-Udtrækning af nøgle features fra use cases nævnes i \citep[Afsnit 14.4, s94]{art:essence} som værende en brugbar måde at nå frem til hvilke udfordringer man kan møde i løbet af ens udviklingsproces hvorfor disse skal overvejes og findes en løsning på før udviklingen egentlig går i gang.
+Udtrækning af klasser af tilstande fra use cases nævnes i \citet[Afsnit 14.4, s94]{art:essence} som en metode til at finde features der skal arbejdes på i projektet.
+
 Det at gå ind i ens use cases giver et fornuftigt fundament for de vanskeligere overvejelser i ens design proces.
 
-Ud fra de use cases, der tidligere er præsenteret får vi følgende essentielle tilstandsklassificerings problemer:
-\begin{itemize}
-\item På korrekt person?
-\item Tilstands ændring?
-\item Kritisk tilstand?
-\end{itemize}
+Ud fra de use cases, der tidligere er præsenteret findes følgende essentielle tilstandsklassificerings problemer:
+\begin{enumerate}
+\item På korrekt person? \label{korrekt}
+\item Tilstands ændring? \label{tilstand}
+\item Kritisk tilstand? \label{kritisk}
+\end{enumerate}
 
-Den første problematik er hvordan man identificerer hvilken person smartphonen befinder sig på.
-Til dette er der flere potentielle løsninger af varierende kompleksitet.
-Den nemmeste mulighed er at bruge en fingeraftrykslæser og så med jævne mellemrum bede bæreren af smartphonen om en scanning.
-Dette er dog ikke en god løsning, da det vil begrænse grupperingen til intervaller, og da man ikke bare kan sætte den til at scanne hele tiden, vil det gå ud over præcisionen.
-Desuden vil det interferere med brugerens hverdag, hvilket gør at for en patient med en depressionsperiode sandsynligvis ikke vil udføre dette.
-En anden mulighed er at bruge data telefonen indsamler til at bestemme hvilken person der bruger telefonen, en potentiel mulighed her er, at identificere personers gangart ud fra accelerometer data.
+Til \textbf{problemstilling \ref{korrekt}} er der flere potentielle løsninger af varierende kompleksitet.
+En mulighed er at bruge en fingeraftrykslæser og så med jævne mellemrum bede bæreren af smartphonen om en scanning.
+Dette vil begrænse grupperingen til intervaller, og eftersom man ikke kan scanne patienten hele tiden, vil det størrelsen af intervallet have en effekt på præcisionen af forudsigelsen.
+En anden mulighed er at bruge data telefonen indsamler til at bestemme hvilken person der bruger telefonen.
+En mulighed kan være at analysere personers gangart ud fra accelerometer data og derved identificer bæreren af telefonen.
 
-Den anden udfordring, at identificere brugerens tilstand, kræver indsamling af meget data fra mange forskellige kilder for at have et grundlag for en vurdering af disse.
-Hvilke datakilder dette skal være kan variere meget fra individ til individ.
+\textbf{Problemstilling \ref{tilstand}} kræver indsamling af meget data fra mange forskellige kilder for at have et grundlag for en vurdering af patientens tilstand.
+Hvilke datakilder der skal benyttes kan variere meget fra individ til individ.
 Et individ kunne for eksempel have brug for at få set på sit bevægelsesmønster og på sin sociale adfærd, hvor et andet kunne have brug for at få analyseret på søvn og på hvor meget han har forladt sit hjem.
 At kunne se på disse er udfordrende i sig selv, da man for hver af disse skal finde ud af hvilke datakilder man har til rådighed, der kan give en fornuftig information om disse, og derefter skal man finde ud af hvordan man ud fra data kan lave en vurdering af det givne kriterie.
-Når hvert kriterie er vurderet skal der laves en vurdering af tilstanden som helhed, og hvordan denne laves skal variere fra individ til individ.
-Det kunne også være man valgte at inddrage brugeren i denne vurdering, enten ved at give dem spørgsmål eller ved at have dem til at gøre noget andet, der kunne give et praj om hvordan de har det.
 
-Den sidste tilstand der kan være er en kritisk tilstand, hvor det vurderes at patienten er så langt nede at der er risiko for han kan forvolde skade på sig selv eller andre.
-Her er problemet hvornår man vurderer en tilstand til at være alvorligt kritisk, men også hvad man rent faktisk skal gøre hvis man når frem til en sådan vurdering.
-Den kritiske vurdering kunne være at man har en grundlinje for hvor lavt eller højt folks sindstilstand kan komme på en scala før den er kritisk, dog er dette nok ikke en god tilgang, da det som altid kan variere meget for hvert individ.
-En anden mulighed ville være at se på hvor folk plejer at befinde sig rent tilstandsmæssigt og så ud fra det vurdere hvor langt det er acceptabelt at lade dem svinge fra det.
-Den anden del af dette scenarie er hvad der skal gøre hvis det vurderes at en patient er for langt ude i forhold til det habituelle niveau de plejer at have.
-Det kunne være det valgtes at der skulle kontaktes en ambulance til enhedens nuværende position, dog ville dette nok kun være tilfældet hvis der er meget stor tillid til estimeringerne fra systemet.
-En mere sandsynlig handlingsplan ville være at kontakte læge eller nærmeste pårørende, få dem til at komme med deres vurdering og derefter foretage de handlinger der passer bedst.
-Denne mulighed er at foretrække hvis det er muligt for den kontaktede person at komme med en vurdering ud fra information systemet sandsynligvis har givet dem adgang til.
-\stefan{kan godt forkortes}
+\textbf{Problemstilling \ref{kritisk}} afhænger af at man kan vurdere om en tilstand er kritisk.
+Det er også nødvendigt at vurdere hvad man rent faktisk skal gøre når en patient vurderes i en kritisk tilstand.
+En mulighed er at konstruere en model over patientens tilstand og ud fra det vurdere hvor langt det er acceptabelt at patienten afviger fra denne baseline.
+Når patientens tilstand vurderes som kritisk kan man kontakte lægen eller nærmeste pårørende
+Hvorefter de kan tage en beslutning om hvad der skal ske.
