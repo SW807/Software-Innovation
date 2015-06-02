@@ -1,7 +1,7 @@
 \section{Use Cases}
-I \citet[Afsnit 13.3, s83, nederst]{art:essence} beskrives fire forskellige elementer der skal overvejes i forbindelse med kreationen af brugs scenarier.
+I \citet[Afsnit 13.3, s83, nederst]{art:essence} beskrives fire forskellige elementer, der skal overvejes i forbindelse med kreationen af brugsscenarier.
 Disse overvejelser skal ligge på stakeholders, kontekst, teknologi og problemer.
-Stakeholders er hvem scenariet har effekt på, kontekst er i hvilke omgivelser scenariet finder sted og hvilken effekt det har, teknologi er hvilke teknologiske muligheder der allerede eksisterer, problemer er hvad alt hvad der kunne give grundlag for en ændring.
+Stakeholders er hvem scenariet har effekt på, kontekst er i hvilke omgivelser scenariet finder sted og hvilken effekt det har, teknologi er hvilke teknologiske muligheder, der allerede eksisterer, problemer er hvad alt hvad der kunne give grundlag for en ændring.
 
 For de scenarier der præsenteres er kontekst og stakeholders vurderet til at være de samme, selvom der i \citet[Afsnit 13.3, s83, nederst]{art:essence} siges at de sagtens kan variere fra et scenarie til et andet.
 
@@ -9,7 +9,7 @@ For de scenarier der præsenteres er kontekst og stakeholders vurderet til at v�
 Konteksten som applikationen skal kunne bruges i er meget bred, da den omfatter hele patientens hverdag og alle tænkelige lokationer en patient kan opholde sig i løbet af sådan en dag.
 Der skal derfor tages højde for at forbindelse til GPS, WIFI og mobilnetværk ikke altid er tilgængelige.
 Da applikationen skal logge data om patientens færden skal der sikres håndtering af en række forskellige tilfælde angående brug og placering af smartphone.
-Smartphonen kan eksempelvis være i lommen, i hånden, på et bord eller i lommen på en jakke der hænger i entréen.
+Smartphonen kan eksempelvis være i lommen, i hånden, på et bord eller i en jakkelomme, hvor jakken hænger i entréen.
 Dette betyder at konteksten kan variere fra ude i en skov uden dataforbindelse til patientens arbejde.
 
 \subsection{Stakeholders}
@@ -17,10 +17,10 @@ I dette projekt er patienterne den vigtigste \textit{stakeholder}, da det er pat
 Systemet skal derfor udvikles på patienternes præmisser.
 I dette projekt er det specifikt patienter med unipolar eller bipolar affektiv lidelse vi beskæftiger os med.
 
-Der er et antal sponsorer tilknyttet projektet, med dette menes folk der har interesse i projektet uden at være direkte stakeholders, da de ikke er tiltænkt at skulle bruge systemet.
+Der er et antal sponsorer tilknyttet projektet, med dette menes folk, der har interesse i projektet uden at være direkte stakeholders, da de ikke er tiltænkt at skulle bruge systemet.
 Morten Aagaard har både erfaring inden for datalogi og psykologi og kan agere bindeled mellem de to discipliner.
 Janne Vedel Rasmussen og Jørgen Aagaard arbejder inden for psykologifaget og kan derfor bidrage med fagrelevant information.
-De har derudover en interesse i at få udviklet værktøjer der kan bidrage til deres arbejde.
+De har derudover en interesse i at få udviklet værktøjer, der kan bidrage til deres arbejde.
 
 \subsection{Scenarios}
 Her undersøges hvordan \textit{the Challenge}\bruno{Skald det være challenges eller?} bliver set fra brugerens perspektiv.
@@ -30,13 +30,13 @@ Teknikker til denne undersøgelse inkluderer at udforske systemets problemdomæn
 \textit{Use scenarios} bruges til at udforske ideer og muligheder i forhold til brugerens brug af systemet.
 
 \subparagraph{Scenarier:}
-\begin{itemize}
-	\item Patienten bevæger sig rundt i sin hverdag med smartphonen i lommen. 
+\begin{enumerate}
+	\item Patienten bevæger sig rundt i sin hverdag med smartphonen i lommen. \label{hverdag}
 	\begin{itemize}
 		\item Data logges i systemet, som gemmes til senere analyse.
 	\end{itemize}
 	
-	\item Patienten vil gerne have applikationen til at fortælle hvordan den vurderer hans tilstand.
+	\item Patienten vil gerne have applikationen til at fortælle hvordan den vurderer hans tilstand. \label{vurder}
 	\begin{itemize}
 		\item Applikationen viser at patienten udviser normal adfærd.
 		\item Applikationen viser at patientens stemningsleje er lavere end normalt.
@@ -44,30 +44,29 @@ Teknikker til denne undersøgelse inkluderer at udforske systemets problemdomæn
 		\item Applikationen viser at patientens stemningsleje er lavere end normalt.
 		Patienten foretager sig intet og tilstanden fortsætter med at forværres.
 	\end{itemize}
-\end{itemize}
-Der er også et enkelt ekstra scenarie hvor der er en kontaktperson som stakeholder.
-Den eksterne kontaktperson kan være mange ting, fx en patients kone, en nær ven eller en læge.
-\begin{itemize}
-	\item Applikationen registrerer fald af tilstand gennem en længere periode
+\end{enumerate}
+Dette sidste scenarie inkluderer en kontaktperson som stakeholder.
+Denne kontaktperson kan fx en patients kone, en nær ven eller en læge. 
+\begin{enumerate}
+	\setcounter{enumi}{2}
+	\item Applikationen registrerer fald af tilstand gennem en længere periode \label{fald}
 	\begin{itemize}
 		\item Tilstanden rammer et kritisk niveau og kontaktperson kontaktes
 	\end{itemize}
-\end{itemize}
+\end{enumerate}
 
-\subsection{Technologies}
-Dette koncept er beskrevet i \citep[Afsnit 13.3, s83, nederst]{art:essence}
-Den smartphone systemet kører på kan bruges til at assistere i at fortælle patienten er tilstanden er blevet, eksempelvis i form af vibration eller afspille en lyd.
-\lars{ARGH satan, ved ikke om dette kan blive til noget fornuftigt.}
 
 \subsection{Problems}
-Af potentielle problemer der kunne være er, at smartphone for ofte befinder sig i en kontekst hvor den indsamlede data ikke kan bruges, hvilket vil kræve en ændring, muligvis i form af en måde at registrere kontekst så data kan filtreres i når det kan bruges og når det ikke kan bruges.
-Et andet problem der kan opstå er, at det ser ud som om smartphonen er på en person, men det er bare ikke den patient det er meningen der skal analyseres på.
+I scenarie \ref{hverdag} er det et potentielt problem at smartphonen for ofte befinder sig i en kontekst hvor den indsamlede data ikke kan bruges, hvilket vil kræve en ændring.
+En mulig ændring kan være i form af en måde at registrere kontekst så data kan filtreres i når det kan bruges og når det ikke kan bruges.
+Et andet problem der kan opstå er, at det ser ud som om at smartphonen er på en person, men det er bare ikke patienten der benytter smartphonen.
 Dette problem kræver en form for persongenkendelse så data fra andre personer kan filtreres fra.
 
-For det andet sæt af scenarier hvor patienten går ind og ser sin tilstand, er der også noget der kan kræve ændring.
-Den første er at patienten ikke bruger det ofte nok og derfor ikke bliver informeret om sin tilstandsændring tids nok til at det rent faktisk betyder noget.
+I scenarie \ref{vurder} er det problematisk hvis patienten ikke bruger det ofte nok og derfor ikke bliver informeret om sin tilstandsændring tids nok til at det rent faktisk kan hjælpe.
 
-I det sidste scenarie, for at bestemme et kritisk niveau skal baseres ud fra individet, desuden kan det for nogen individer kræve øjeblikkelig indlæggelse.
+I scenarie \ref{fald} kan det være et problem at bestemme det kritiske niveau ud fra individet
+Desuden kan det for nogen individer kræve øjeblikkelig indlæggelse.
 Hvis en sådan patient registreres i kritisk tilstand, er det ikke nok bare at kontakte en kontaktperson, men burde nok nærmere tilkalde en ambulance.
-Der er også den risiko at det at kontakte en kontaktperson bliver vurderet som problematisk i forhold til patient empowerment konceptet som dette gerne skulle hjælpe med. \bruno{Forstår ikke den her sidste paragraf :((}
+Der er også den risiko at det at kontakte en kontaktperson bliver vurderet som problematisk i forhold til patient empowerment konceptet, som dette gerne skulle hjælpe med. \bruno{Forstår ikke den her sidste paragraf :((}
+\stefan{jeg har sat en reference på, men er også lidt i tvivl om meningen med indholdet}
 
